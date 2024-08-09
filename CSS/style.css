@@ -1,0 +1,435 @@
+/* 全体 */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(249, 249, 249);
+}
+
+/* ヘッダー背景色 */
+header>div {
+    width: 100%;
+    background-color: #333333;
+}
+
+/* 画面幅が640px以上の時 */
+@media screen and (min-width: 641px) {
+    /* PC用のスタイル */
+
+    .header-flexbox-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        color: aliceblue;
+    }
+
+    #nav-pc {
+        margin-top: auto;
+        margin-bottom: auto;
+        color: aliceblue;
+    }
+
+    #nav-pc>a {
+        margin: 20px;
+    }
+
+    a:link {
+        color: #EEEEEE;
+    }
+
+    a:visited {
+        color: #EEEEEE;
+    }
+
+    #nav-sp{
+        display: none;
+    }
+    /* トップセクション */
+    .top-flexbox-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 350px;
+        /* background: linear-gradient(135deg,rgb(233, 16, 116),rgb(198, 44, 140),rgb(154, 79, 170),rgb(116, 109, 196),rgb(85, 134, 217)); */
+        background: radial-gradient(rgb(109, 212, 240), rgb(106, 200, 239), rgb(98, 164, 236), rgb(91, 127, 233), rgb(90, 122, 232), rgb(84, 98, 230));
+        border-radius: 10px;
+    }
+
+    .top-h2 {
+        color: aliceblue;
+        text-align: center;
+    }
+
+    .top-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-flexbox-container>p {
+        color: #EEEEEE;
+        padding: 0 70px 0 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title-box {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title {
+        margin-bottom: 5px;
+    }
+
+    .products-flexbox-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100%;
+        margin: 5px auto 20px auto;
+    }
+
+    .products-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+        height: 200px;
+        background-color: rgb(244, 244, 244);
+        border-radius: 10px;
+        transition: all .3s;
+    }
+
+    .products-item:hover {
+        margin-top: -5px;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    .products-img {
+        width: 130px;
+        height: 130px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    }
+
+    .products-item>h3 {
+        text-align: center;
+    }
+
+    #modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(5px);
+    }
+
+    #close-btn {
+        color: rgb(204, 204, 204);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #contact {
+        height: 600px;
+    }
+
+    #form {
+        width: 80%;
+        height: 330px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    #form-box {
+        width: 90%;
+        height: 400px;
+        margin: auto;
+    }
+
+    .contact-item>h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form-item {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: solid 1px rgb(204, 204, 204)
+    }
+
+    #submit {
+        width: 90px;
+        height: 40px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(51, 51, 51);
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #message-box {
+        width: 80%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #message {
+        color: rgb(240, 13, 13);
+        font-weight: bold;
+    }
+
+    /* スマホ用ハンバーガーメニュー */
+    #hamburger-menu {
+        width: 30px;
+        height: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: none;
+    }
+}
+
+/* 画面幅が640px以上の時 */
+@media  screen and (max-width: 640px) {
+
+    .header-flexbox-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* サイトタイトル */
+    h1 {
+        color: aliceblue;
+    }
+
+    /* ハンバーガーメニュー */
+    #hamburger-menu {
+        width: 30px;
+        height: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 5px;
+    }
+
+    /* スマホ用メニュー */
+    #nav-sp {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 500px;
+        background: linear-gradient(rgb(109, 212, 240), rgb(106, 200, 239), rgb(98, 164, 236), rgb(91, 127, 233), rgb(90, 122, 232), rgb(84, 98, 230));;
+        border-radius: 0  0 0 10px;
+        z-index: 100;
+    }
+
+    
+    #nav-sp > #nav-close-btn{
+        position: absolute;
+        display: block;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    #nav-sp > a{
+        display: block;
+        font-size: 2rem;
+        margin: 20px;
+        width: max-content;
+    }
+
+    /* リンクの未訪問時のカラー */
+    #nav-sp > a:link {
+        color: #EEEEEE;
+    }
+
+    /* リンク訪問時のカラー */
+    #nav-sp > a:visited {
+        color: #EEEEEE;
+    }
+
+    /* PC用ナビゲーションメニュー */
+    #nav-pc{
+        display: none;
+    }
+
+    /* トップセクション */
+    .top-flexbox-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 350px;
+        /* background: linear-gradient(135deg,rgb(233, 16, 116),rgb(198, 44, 140),rgb(154, 79, 170),rgb(116, 109, 196),rgb(85, 134, 217)); */
+        background: radial-gradient(rgb(109, 212, 240), rgb(106, 200, 239), rgb(98, 164, 236), rgb(91, 127, 233), rgb(90, 122, 232), rgb(84, 98, 230));
+        border-radius: 10px;
+    }
+
+    .top-h2 {
+        color: aliceblue;
+        text-align: center;
+    }
+
+    .top-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-flexbox-container>p {
+        color: #EEEEEE;
+        padding: 0 70px 0 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title-box {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title {
+        margin-bottom: 5px;
+    }
+
+    .products-flexbox-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100%;
+        margin: 5px auto 20px auto;
+    }
+
+    .products-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+        height: 200px;
+        background-color: rgb(244, 244, 244);
+        border-radius: 10px;
+        transition: all .3s;
+    }
+
+    .products-item:hover {
+        margin-top: -5px;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    .products-img {
+        width: 130px;
+        height: 130px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    }
+
+    .products-item>h3 {
+        text-align: center;
+    }
+
+    #modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(5px);
+    }
+
+    #close-btn {
+        color: rgb(204, 204, 204);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #contact {
+        height: 600px;
+    }
+
+    #form {
+        width: 80%;
+        height: 330px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    #form-box {
+        width: 90%;
+        height: 400px;
+        margin: auto;
+    }
+
+    .contact-item>h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form-item {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: solid 1px rgb(204, 204, 204)
+    }
+
+    #submit {
+        width: 90px;
+        height: 40px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(51, 51, 51);
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #message-box {
+        width: 80%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #message {
+        color: rgb(240, 13, 13);
+        font-weight: bold;
+    }
+}

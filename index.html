@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイポートフォリオ</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header-flexbox-container">
+                <h1>マイポートフォリオ</h1>
+                <!-- PC用メニュー -->
+                <nav id="nav-pc">
+                    <a href="#about">About</a>
+                    <a href="#products">Products</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <img id="hamburger-menu" src="./img/sozai_cman_jp_20240808213325.png" alt="ハンバーガーメニュー">
+            </div>
+        </div>
+        <!-- スマホ用メニュー -->
+        <nav id="nav-sp">
+            <img id="nav-close-btn" src="./img/sozai_cman_jp_20240809011522.png" alt="閉じるボタン">
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <div class="top-flexbox-container">
+                <h2 class="top-h2">About</h2>
+                <img src="./img/150.png" alt="TOP画像" class="top-img">
+                <p>フロントエンドエンジニアの山田太郎です。モダンなデザインと直感的なUI/UXを追求し、ReactやVue.jsを駆使したウェブアプリケーションの開発を得意としています。詳細はプロジェクトページをご覧ください。
+                </p>
+            </div>
+        </section>
+        <section id="products">
+            <div class="title-box">
+                <h2 class="title">Products</h2>
+            </div>
+            <div class="products-flexbox-container">
+                <div class="products-item">
+                    <img src="./img/150.png" alt="作品その１の画像" class="products-img">
+                    <h3>作品その１</h3>
+                </div>
+                <div class="products-item">
+                    <img src="./img/150.png" alt="作品その１の画像" class="products-img">
+                    <h3>作品その２</h3>
+                </div>
+                <div class="products-item">
+                    <img src="./img/150.png" alt="作品その１の画像" class="products-img">
+                    <h3>作品その３</h3>
+                </div>
+            </div>
+            <div class="products-flexbox-container">
+                <div class="products-item">
+                    <img src="./img/150.png" alt="作品その１の画像" class="products-img">
+                    <h3>作品その４</h3>
+                </div>
+                <div class="products-item">
+                    <img src="./img/150.png" alt="作品その１の画像" class="products-img">
+                    <h3>作品その５</h3>
+                </div>
+                <div class="products-item">
+                    <img src="./img/150.png" alt="作品その１の画像" class="products-img">
+                    <h3>作品その６</h3>
+                </div>
+            </div>
+            <!-- モーダル-->
+            <div id="modal-container">
+                <div id="modal-box">
+                    <span id="close-btn">&#215;</span>
+                    <h2 id="modal-h2"></h2>
+                    <img src="" alt="" id="modal-img">
+                    <h3 id="modal-h3"></h3>
+                    <button id="modal-btn">詳しくはこちら</button>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="title-box">
+                <h2 class="title">Contact</h2>
+            </div>
+            <form id="form">
+                <div id="form-box">
+                    <div class="contact-item">
+                        <h3>お名前:</h3>
+                    </div>
+                    <div class="contact-item">
+                        <input name="name" id="name" class="form-item" type="text" placeholder="お名前を入力してください">
+                    </div>
+                    <div class="contact-item">
+                        <h3>メールアドレス:</h3>
+                    </div>
+                    <div class="contact-item">
+                        <input name="email" id="email" class="form-item" type="text" placeholder="メールアドレスを入力してください">
+                    </div>
+                    <div class="contact-item">
+                        <h3>メッセージ</h3>
+                    </div>
+                    <div class="contact-item">
+                        <textarea name="message" id="contact-message" class="form-item" placeholder="メッセージを入力してください"></textarea>
+                    </div>
+                    <input id="submit" type="submit" value="送信する">
+                </div>
+            </form>
+            <div id="message-box">
+                <p id="message"></p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- ◇全体
+・各エリアの横幅はページ全体の80%でお願いします。
+・レスポンシブ対応もお願いします（メニューはハンバーガーメニュー必要ないです）
+
+◆自己紹介
+・背景はグラデーションでお願いします（色はだいたいで良いです）
+
+◆作品紹介
+・それぞれホバーすると周りがフワッと浮いたような表現。
+・クリックするとモーダルウィンドウが表示される（アニメーションで上から下にコンテンツがスライドで表示されるイメージ）
+・モーダルウィンドウはバツ印をクリックすると閉じる。
+
+◆フォーム
+・項目は「お名前」「メールアドレス」「メッセージ」の3種類
+・1つでも未入力の項目がある時はフォームの下部分にエラーメッセージを表示する。
+・全ての項目が埋まった状態で送信ボタンを押すと、「メッセージを送信しました」と表示される。
+・そのままだとHTML5以降で実装された自動バリデーションチェックが動いてしまうかもしれないので、それは無効化してください（おそらくJSのエラーメッセージが出ない） -->
+<script src="./JS/script.js"></script>
+</body>
+
+</html>
